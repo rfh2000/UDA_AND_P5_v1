@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\libs\volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c68094cbd011a3f9dccbfe16e77a2cf43622e277">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\volley-9dbc7009bab637c54dc52d91e443f3eb6036a986.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-c6126fc2e569e8a7a500224cf6abb26c365327bf.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-d61663b01bbe44f1ebf578d525e42047b07300fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="def3eff2b7b4774d96ae15b07b3fc0111edbfe24">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-04a1271a16794e1d8108653683623101e3b29a0a.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-94299c6193e516e53cd1096a58136682e56efa02.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-d57125f9a47605b00cd3cdcf922ebe041820a5f2.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\okio-1.6.0-e1c4c9981cc034d192107084ba88e39a101554bf.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="def3eff2b7b4774d96ae15b07b3fc0111edbfe24">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-f38a1ae5c332e616f12d62aa4d3c31b5cc82c772.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-23587277b6550a73598cd8019cf4f76c69b49e88.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\libs\volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c68094cbd011a3f9dccbfe16e77a2cf43622e277">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\volley-ba4cba656e82da3c6600cde6cf1c62047e6efadc.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-c200c09aa10d66463e346a57af9f4d5ce31f3e51.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.1.2\7052283359001bb108753cb0583a887d3bf94c82\okhttp-3.1.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\okhttp-3.1.2-2558fb83326233433a2d367d10d626aeb4c7f87c.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\palette-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="285506e1cf9d5a66878e2aab3884b3427f8734e9">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-e29df9e9b7c4bdd02889dfb4964e1f7f0a6b1303.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\palette-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="285506e1cf9d5a66878e2aab3884b3427f8734e9">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-d4b2d187ac86db7dc75f431ec1cbdb03aa959e5e.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-b1b89cecd413f6cc7beff2b0b2a38855a65a5ce3.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-146a86a5d0a933b89f8f31051c0673b534c89ddb.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-8a0d7af028200851d77fef8a3338eea97000ea0d.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-ba65f1ad48cd9eceeba3d957c2e79c7acc4f9ea6.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\classes-b1f4bd7dbfed2c37bb6cc60952cc5ae742d08b25.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\UDA_AND_P5_v1\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-c2753d450803351bd5e374d85249b6f7c30a3811.jar" />
+    </item>
+    <item
+        jar="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\lecoq\AndroidStudioProjects\XYZReader\build\intermediates\pre-dexed\debug\classes-9dab6828f10590e58e458c8ea2cb7449a6ff0127.jar" />
+    </item>
+
+</items>
