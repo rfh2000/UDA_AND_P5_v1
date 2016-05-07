@@ -1,8 +1,5 @@
 <resources>
 
-    <!-- http://stackoverflow.com/questions/32909364/why-does-android-studio-always-shows-actionbar-in-app-design-even-when-disabled -->
-    <!-- http://stackoverflow.com/questions/33655908/setting-android-toolbar-background-and-text-colors-in-android-studio-1-4-1 -->
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
