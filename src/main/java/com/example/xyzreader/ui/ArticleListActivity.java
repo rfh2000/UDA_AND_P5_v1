@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -61,6 +62,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, getDrawable(R.drawable.padded_divider), StaggeredGridLayoutManager.VERTICAL));
+
         getLoaderManager().initLoader(0, null, this);
 
         if (savedInstanceState == null) {
@@ -144,6 +147,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
+            //View view = getLayoutInflater().inflate(R.layout.list_item_article2, parent, false);
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
