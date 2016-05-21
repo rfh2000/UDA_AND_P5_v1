@@ -62,7 +62,9 @@ public class ArticleListActivity extends AppCompatActivity implements
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, getDrawable(R.drawable.padded_divider), StaggeredGridLayoutManager.VERTICAL));
+
+        // Sets a divider for the layout
+        //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, getDrawable(R.drawable.padded_divider), StaggeredGridLayoutManager.VERTICAL));
 
         getLoaderManager().initLoader(0, null, this);
 

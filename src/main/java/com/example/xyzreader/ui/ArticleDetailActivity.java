@@ -12,6 +12,7 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
@@ -39,6 +40,17 @@ public class ArticleDetailActivity extends ActionBarActivity
     private View mUpButton;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Remove actionbar and/or the default up button in the action bar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+//            getSupportActionBar().setDisplayShowHomeEnabled(false);
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -46,7 +58,9 @@ public class ArticleDetailActivity extends ActionBarActivity
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
+
         setContentView(R.layout.activity_article_detail);
+        //setContentView(R.layout.activity_article_detail2);
 
         getLoaderManager().initLoader(0, null, this);
 
@@ -78,6 +92,7 @@ public class ArticleDetailActivity extends ActionBarActivity
 
         mUpButtonContainer = findViewById(R.id.up_container);
 
+        // Code for the up button
         mUpButton = findViewById(R.id.action_up);
         mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

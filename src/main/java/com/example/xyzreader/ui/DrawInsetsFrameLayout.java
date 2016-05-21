@@ -60,6 +60,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
         assert a != null;
 
         mInsetBackground = a.getDrawable(R.styleable.DrawInsetsFrameLayout_insetBackground);
+        //mInsetBackground = a.getDrawable(R.color.colorPrimary);
 
         a.recycle();
     }
