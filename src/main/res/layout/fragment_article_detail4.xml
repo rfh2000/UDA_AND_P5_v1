@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorLightPrimary"
+    android:fitsSystemWindows="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.ArticleDetailActivity">
 
     <!-- android:fitsSystemWindows="true" -->
 
-    <com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.example.xyzreader.ui.DrawInsetsFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/draw_insets_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <com.example.xyzreader.ui.ObservableScrollView
             android:id="@+id/scrollview"
@@ -30,18 +33,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
                 <FrameLayout
                     android:id="@+id/photo_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/photo_placeholder">
+
                     <!--suppress AndroidLintContentDescription -->
                     <ImageView
                         android:id="@+id/photo"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center" />
+                        android:adjustViewBounds="true"/>
+
+                        <!-- android:scaleType="centerCrop" -->
+                        <!-- android:layout_gravity="center" -->
 
                     <View
                         android:layout_width="match_parent"
@@ -136,7 +142,6 @@
             android:src="@drawable/ic_share"
             android:elevation="@dimen/fab_elevation"
             android:contentDescription="@string/action_share" /> -->
-
 
     </com.example.xyzreader.ui.DrawInsetsFrameLayout>
 
