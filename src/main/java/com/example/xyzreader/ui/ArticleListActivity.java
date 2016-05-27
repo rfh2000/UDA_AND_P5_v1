@@ -13,11 +13,14 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +42,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
     private Toolbar mToolbar;
+    private CardView mCardView;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
@@ -48,14 +52,21 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
+        findScreenSize();
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        // Added line below based on developer guide
-        setSupportActionBar(mToolbar);
 
-        // Remove the default title and set the logo drawable as the title
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//         Added line below based on developer guide
+//        setSupportActionBar(mToolbar);
+//         Remove the default title and set the logo drawable as the title
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         mToolbar.setLogo(R.drawable.logo);
+
+        // Set the max elevation for the CardView
+        //mCardView = (CardView) findViewById(R.id.cardview);
+        //mCardView.setMaxCardElevation(8f);
 
         //final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
@@ -114,9 +125,14 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
         Adapter adapter = new Adapter(cursor);
+        int columnCount;
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-        int columnCount = getResources().getInteger(R.integer.list_column_count);
+        if (isTablet()) {
+            columnCount = getResources().getInteger(R.integer.list_column_count);
+        } else {
+            columnCount = 1;
+        }
 
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
@@ -125,7 +141,9 @@ public class ArticleListActivity extends AppCompatActivity implements
 //        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
 //        mRecyclerView.setLayoutManager(mLayoutManager);
 
-
+        // Set the max elevation for the CardView
+        //mCardView = (CardView) findViewById(R.id.cardview);
+        //mCardView.setMaxCardElevation(8.0f);
     }
 
     @Override
@@ -195,5 +213,43 @@ public class ArticleListActivity extends AppCompatActivity implements
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
         }
+    }
+
+    public void findScreenSize(){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int widthPixels = metrics.widthPixels;
+        int heightPixels = metrics.heightPixels;
+        float scaleFactor = metrics.density;
+        float widthDp = widthPixels / scaleFactor;
+        float heightDp = heightPixels / scaleFactor;
+        float smallestWidth = Math.min(widthDp, heightDp);
+        Log.v("LOG______TAG", "Smallest width is " + smallestWidth);
+
+        if (smallestWidth >= 720) {
+            //Device is a 10" tablet
+            Log.v("LOG______TAG", "I'm a 10");
+        }
+        else if (smallestWidth >= 600) {
+            //Device is a 7" tablet
+            Log.v("LOG______TAG", "I'm a 7");
+        }
+    }
+
+    private boolean isTablet(){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int widthPixels = metrics.widthPixels;
+        int heightPixels = metrics.heightPixels;
+        float scaleFactor = metrics.density;
+        float widthDp = widthPixels / scaleFactor;
+        float heightDp = heightPixels / scaleFactor;
+        float smallestWidth = Math.min(widthDp, heightDp);
+        //Log.v("LOG______TAG", "Smallest width is " + smallestWidth);
+        if (smallestWidth >= 600) {
+            //Device is a 7" tablet
+            return true;
+        }
+        return false;
     }
 }
