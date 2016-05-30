@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.text.format.DateUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -25,6 +27,7 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.xyzreader.R;
@@ -53,6 +56,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_article_list);
 
         findScreenSize();
+        //isLandscape();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
@@ -71,11 +75,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         //final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
-        // Sets a divider for the layout
-        //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, getDrawable(R.drawable.padded_divider), StaggeredGridLayoutManager.VERTICAL));
 
         getLoaderManager().initLoader(0, null, this);
 
@@ -128,18 +128,18 @@ public class ArticleListActivity extends AppCompatActivity implements
         int columnCount;
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-        if (isTablet()) {
-            columnCount = getResources().getInteger(R.integer.list_column_count);
-        } else {
-            columnCount = 1;
-        }
+//        if (isTablet()) {
+//            columnCount = getResources().getInteger(R.integer.list_column_count);
+//        } else {
+//            columnCount = 1;
+//        }
+        //columnCount = 2;
+        columnCount = (isLandscape() ? 3 : 2);
+
 
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(sglm);
-
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-//        mRecyclerView.setLayoutManager(mLayoutManager);
 
         // Set the max elevation for the CardView
         //mCardView = (CardView) findViewById(R.id.cardview);
@@ -166,8 +166,10 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+            // CHANGE THE CARDVIEW ITEM HERE
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
-            //View view = getLayoutInflater().inflate(R.layout.list_item_article2, parent, false);
+
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -183,13 +185,22 @@ public class ArticleListActivity extends AppCompatActivity implements
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
-            holder.subtitleView.setText(
-                    DateUtils.getRelativeTimeSpanString(
-                            mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
-                            System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-                            DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by "
-                            + mCursor.getString(ArticleLoader.Query.AUTHOR));
+            //holder.bodyView.setText(mCursor.getString(ArticleLoader.Query.BODY));
+            holder.bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
+//            holder.subtitleView.setText(
+//                    DateUtils.getRelativeTimeSpanString(
+//                            mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
+//                            System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
+//                            DateUtils.FORMAT_ABBREV_ALL).toString()
+//                            + " by "
+//                            + mCursor.getString(ArticleLoader.Query.AUTHOR));
+
+            holder.authorView.setText(mCursor.getString(ArticleLoader.Query.AUTHOR));
+            holder.dateView.setText(DateUtils.getRelativeTimeSpanString(
+                                        mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
+                                        System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
+                                        DateUtils.FORMAT_ABBREV_ALL).toString());
+
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
@@ -204,14 +215,23 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public DynamicHeightNetworkImageView thumbnailView;
+        //public ImageView thumbnailView;
         public TextView titleView;
+        public TextView bodyView;
         public TextView subtitleView;
+        public TextView authorView;
+        public TextView dateView;
 
         public ViewHolder(View view) {
             super(view);
+
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
+            //thumbnailView = (ImageView) view.findViewById(R.id.thumbnail2);
             titleView = (TextView) view.findViewById(R.id.article_title);
+            bodyView = (TextView) view.findViewById(R.id.article_body);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            authorView = (TextView) view.findViewById(R.id.article_author);
+            dateView = (TextView) view.findViewById(R.id.article_date);
         }
     }
 
@@ -234,6 +254,10 @@ public class ArticleListActivity extends AppCompatActivity implements
             //Device is a 7" tablet
             Log.v("LOG______TAG", "I'm a 7");
         }
+    }
+
+    private boolean isLandscape(){
+        return (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
     }
 
     private boolean isTablet(){
