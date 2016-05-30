@@ -143,6 +143,7 @@ public class ArticleListActivity extends AppCompatActivity implements
             LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(llm);
         }
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 //        StaggeredGridLayoutManager sglm =
 //                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
 //        mRecyclerView.setLayoutManager(sglm);
