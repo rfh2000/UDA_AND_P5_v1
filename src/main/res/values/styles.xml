@@ -47,9 +47,14 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="TextAppearance.Large">
+    <!-- <style name="TextAppearance.Large">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style> -->
+
+    <style name="TextAppearance.Large">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
@@ -59,9 +64,14 @@
         <item name="android:textColor">#FFF</item>
     </style>
 
+    <!--<style name="TextAppearance.Medium">-->
+        <!--<item name="android:textSize">22sp</item>-->
+        <!--<item name="android:textStyle">italic</item>-->
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+    <!--</style>-->
+
     <style name="TextAppearance.Medium">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
 
@@ -72,10 +82,11 @@
     </style>
 
     <style name="TextAppearance.Small">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+
+    <!--<item name="android:textStyle">bold</item>-->
 
     <style name="TextAppearance.SmallInverse">
         <item name="android:textSize">14sp</item>
