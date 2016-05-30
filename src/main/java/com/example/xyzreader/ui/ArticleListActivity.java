@@ -136,10 +136,16 @@ public class ArticleListActivity extends AppCompatActivity implements
         //columnCount = 2;
         columnCount = (isLandscape() ? 3 : 2);
 
-
-        StaggeredGridLayoutManager sglm =
-                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(sglm);
+        if (isTablet()) {
+            StaggeredGridLayoutManager sglm = new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
+            mRecyclerView.setLayoutManager(sglm);
+        } else {
+            LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            mRecyclerView.setLayoutManager(llm);
+        }
+//        StaggeredGridLayoutManager sglm =
+//                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
+//        mRecyclerView.setLayoutManager(sglm);
 
         // Set the max elevation for the CardView
         //mCardView = (CardView) findViewById(R.id.cardview);
@@ -229,7 +235,7 @@ public class ArticleListActivity extends AppCompatActivity implements
             //thumbnailView = (ImageView) view.findViewById(R.id.thumbnail2);
             titleView = (TextView) view.findViewById(R.id.article_title);
             bodyView = (TextView) view.findViewById(R.id.article_body);
-            subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            //subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
             authorView = (TextView) view.findViewById(R.id.article_author);
             dateView = (TextView) view.findViewById(R.id.article_date);
         }

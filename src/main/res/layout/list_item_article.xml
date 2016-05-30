@@ -1,122 +1,71 @@
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardview"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    android:clickable="true"
     android:focusable="true"
-    android:foreground="?selectableItemBackground"
-    card_view:cardElevation="2dp"
-    card_view:cardCornerRadius="4dp">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="@color/colorLightPrimary"
+    android:orientation="vertical">
 
-    <!--android:layout_marginLeft="4dp"-->
-    <!--android:layout_marginRight="4dp"-->
-    <!--android:layout_marginTop="4dp"-->
-    <!--android:layout_marginBottom="4dp"-->
+    <!--android:background="?android:attr/selectableItemBackground"-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@color/photo_placeholder"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false" />
+
+    <!-- height could be wrap_content -->
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:id="@+id/article_title"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="20sp"
+        />
 
-        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
-            android:id="@+id/thumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/photo_placeholder" />
+    <!--android:layout_toRightOf="@+id/thumbnail"-->
 
-        <TextView
-            android:id="@+id/article_title"
-            style="@style/TextAppearance.Large"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="8dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="8dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:maxLines="1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/article_body"
+        android:layout_below="@+id/article_title"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/colorDivider" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/article_author"
+        android:layout_below="@+id/article_title"
+        android:layout_toRightOf="@+id/thumbnail"
+        />
 
-        <TextView
-            android:id="@+id/article_body"
-            style="@style/TextAppearance.Medium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorLink="@color/colorAccent"
-            android:paddingLeft="16dp"
-            android:paddingTop="8dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="8dp"
-            android:maxLines="3"
-            android:singleLine="false"
-            android:ellipsize="end" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/article_date"
+        android:layout_below="@+id/article_title"
+        android:layout_toRightOf="@+id/thumbnail"
+        />
 
-        <!--android:paddingLeft="8dp"-->
-        <!--android:paddingTop="16dp"-->
-        <!--android:paddingRight="16dp"-->
-        <!--android:paddingBottom="16dp"-->
+</RelativeLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/colorDivider" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="8dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="8dp">
-
-            <ImageView
-                android:id="@+id/image_news"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_news_48"/>
-
-            <TextView
-                android:id="@+id/article_author"
-                style="@style/TextAppearance.Small"
-                android:layout_toRightOf="@id/image_news"
-                android:layout_alignTop="@id/image_news"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:textColor="#000000"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:ellipsize="end" />
-
-            <TextView
-                android:id="@+id/article_date"
-                style="@style/TextAppearance.Small"
-                android:layout_toRightOf="@id/article_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:paddingLeft="8dp"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:ellipsize="end" />
-
-            <!--android:paddingLeft="16dp"-->
-            <!--android:paddingTop="16dp"-->
-            <!--android:paddingRight="16dp"-->
-            <!--android:paddingBottom="16dp"-->
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-</android.support.v7.widget.CardView>
 
