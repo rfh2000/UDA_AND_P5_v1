@@ -1,13 +1,18 @@
 package com.example.xyzreader.ui;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+
+import com.example.xyzreader.R;
 
 /**
  * Created by lecoq on 30/05/2016.
@@ -17,6 +22,12 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
+//    private static final int[] ATTRS = new int[]{
+////            R.drawable.test_divider
+////            R.attr.dividerHorizontal
+//        R.drawable.test_divider
+//    };
+
 
     public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
 
@@ -26,10 +37,21 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private int mOrientation;
 
+    private Context mContext;
+
     public DividerItemDecoration(Context context, int orientation) {
+        this.mContext = context;
         final TypedArray a = context.obtainStyledAttributes(ATTRS);
         mDivider = a.getDrawable(0);
         a.recycle();
+        setOrientation(orientation);
+    }
+
+    /**
+     * Custom divider will be used
+     */
+    public DividerItemDecoration(Context context, int orientation, int resId) {
+        mDivider = ContextCompat.getDrawable(context, resId);
         setOrientation(orientation);
     }
 
@@ -50,9 +72,21 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     public void drawVertical(Canvas c, RecyclerView parent) {
-        final int left = parent.getPaddingLeft();
-        final int right = parent.getWidth() - parent.getPaddingRight();
-
+        //final int left = parent.getPaddingLeft();
+        //final int left = parent.getWidth()/5*2+parent.getPaddingLeft();
+//        final int left = parent.getWidth()/5*2;
+//        final int right = parent.getWidth() - parent.getPaddingRight();
+        int left;
+        int right;
+        if (isLandscape()) {
+            left = parent.getWidth()/5*1 + parent.getPaddingLeft();
+            right = parent.getWidth() - parent.getPaddingRight();
+        } else {
+            left = parent.getWidth()/5*2;
+            right = parent.getWidth() - parent.getPaddingRight();
+        }
+        Log.v("DID", "Left is " + left);
+        Log.v("DID", "Right is " + right);
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View child = parent.getChildAt(i);
@@ -88,6 +122,10 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         } else {
             outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
         }
+    }
+
+    private boolean isLandscape(){
+        return (mContext.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
     }
 }
 

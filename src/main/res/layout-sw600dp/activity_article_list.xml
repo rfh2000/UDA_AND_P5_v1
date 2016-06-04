@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorLightPrimary"
+    android:background="@drawable/photo_background_protection"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.ArticleListActivity">
 
-    <!--android:background="@drawable/photo_background_protection"-->
     <!-- android:background="@color/theme_primary_light" -->
     <!-- android:fitsSystemWindows="true" -->
 
@@ -24,8 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/space"/>
-
-            <!--android:padding="@dimen/space"-->
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
@@ -48,15 +45,15 @@
 
             <!-- android:theme="@style/AppTheme.AppBarOverlay" -->
 
-        <!-- <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"> -->
+            <!-- <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"> -->
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -65,10 +62,10 @@
                 android:background="?attr/colorPrimary"
                 android:elevation="8dp" />
 
-                <!-- app:popupTheme="@style/AppTheme.PopupOverlay" -->
-                <!-- android:layout_height="?attr/actionBarSize" -->
-                <!-- android:layout_height="88dp" -->
-                <!-- android:background="?attr/colorPrimary" -->
+            <!-- app:popupTheme="@style/AppTheme.PopupOverlay" -->
+            <!-- android:layout_height="?attr/actionBarSize" -->
+            <!-- android:layout_height="88dp" -->
+            <!-- android:background="?attr/colorPrimary" -->
 
             <!-- <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
