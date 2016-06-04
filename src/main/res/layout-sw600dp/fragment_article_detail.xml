@@ -29,14 +29,28 @@
             <ImageView
                 android:id="@+id/photo"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:padding="0dp"
                 app:layout_collapseMode="parallax"
                 android:src="@drawable/empty_detail" />
 
-                <!-- android:scaleType="fitXY" -->
-                <!-- center, centerCrop, centerInside, fitCenter, fitEnd, fitStart, fitXY, matrix -->
+            <!-- android:scaleType="fitXY" -->
+            <!-- center, centerCrop, centerInside, fitCenter, fitEnd, fitStart, fitXY, matrix -->
+
+            <!--<com.android.volley.toolbox.NetworkImageView-->
+            <!--android:id="@+id/photo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/photo_placeholder"-->
+            <!--android:src="@drawable/empty_detail" />-->
+
+            <!--<com.example.xyzreader.ui.DynamicHeightNetworkImageView-->
+            <!--android:id="@+id/photo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/photo_placeholder"-->
+            <!--android:src="@drawable/empty_detail" />-->
 
             <!--android:scaleType="centerCrop"-->
             <!--android:adjustViewBounds="true"-->
@@ -60,13 +74,11 @@
 
             <TextView
                 android:id="@+id/article_title"
-                style="?android:attr/textAppearanceMediumInverse"
+                style="?android:attr/textAppearanceLargeInverse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                 android:lineSpacingMultiplier="@fraction/detail_headline_line_spacing_multiplier" />
-
-            <!--style="?android:attr/textAppearanceLargeInverse"-->
 
             <TextView
                 android:id="@+id/article_subtitle"
@@ -80,7 +92,7 @@
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
 
@@ -90,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
             android:layout_marginRight="@dimen/detail_inner_horiz_margin"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:paddingBottom="@dimen/detail_body_bottom_margin"
             android:textColor="@color/colorTextSecondary"
             android:textColorLink="@color/colorAccent"

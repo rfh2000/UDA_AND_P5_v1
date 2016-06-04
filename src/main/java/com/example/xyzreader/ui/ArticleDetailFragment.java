@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -21,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -118,6 +120,12 @@ public class ArticleDetailFragment extends Fragment implements
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
+        if (!isLandscape()) {
+            mPhotoView.getLayoutParams().height = (int) findScreenAxisLength("height") / 3 * 2;
+            Log.v("ONCREATEVIEW", "New height is " + (int) findScreenAxisLength("height")/3*2);
+            mPhotoView.requestLayout();
+        }
+        //Log.v("ONCREATEVIEW", "New height is " + (int) findScreenAxisLength("height")/3*2);
         //mPhotoView = (NetworkImageView) mRootView.findViewById(R.id.photo);
         //mPhotoView = (DynamicHeightNetworkImageView) mRootView.findViewById(R.id.photo);
 
@@ -137,6 +145,9 @@ public class ArticleDetailFragment extends Fragment implements
 
         bindViews();
 //        updateStatusBar();
+
+        findScreenSize();
+
         return mRootView;
     }
 
@@ -282,6 +293,53 @@ public class ArticleDetailFragment extends Fragment implements
         return mIsCard
                 ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY
                 : mPhotoView.getHeight() - mScrollY;
+    }
+
+
+    public void findScreenSize(){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int widthPixels = metrics.widthPixels;
+        Log.v("FINDSCREENSIZE", "Pixel width is " + widthPixels);
+        int heightPixels = metrics.heightPixels;
+        Log.v("FINDSCREENSIZE", "Pixel height is " + heightPixels);
+        float scaleFactor = metrics.density;
+        Log.v("FINDSCREENSIZE", "Scale factor is " + scaleFactor);
+        float widthDp = widthPixels / scaleFactor;
+        Log.v("FINDSCREENSIZE", "Pixel width dp is " + widthDp);
+        float heightDp = heightPixels / scaleFactor;
+        Log.v("FINDSCREENSIZE", "Pixel height dp is " + heightDp);
+        float smallestWidth = Math.min(widthDp, heightDp);
+    }
+
+    public float findScreenAxisLength(String axis){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int widthPixels = metrics.widthPixels;
+        Log.v("FINDSCREENSIZE", "Pixel width is " + widthPixels);
+        int heightPixels = metrics.heightPixels;
+        Log.v("FINDSCREENSIZE", "Pixel height is " + heightPixels);
+        float scaleFactor = metrics.density;
+        Log.v("FINDSCREENSIZE", "Scale factor is " + scaleFactor);
+        float widthDp = widthPixels / scaleFactor;
+        Log.v("FINDSCREENSIZE", "Pixel width dp is " + widthDp);
+        float heightDp = heightPixels / scaleFactor;
+        Log.v("FINDSCREENSIZE", "Pixel height dp is " + heightDp);
+        float smallestWidth = Math.min(widthDp, heightDp);
+//        if (axis == "height") {
+//            return heightDp;
+//        } else {
+//            return widthDp;
+//        }
+        if (axis == "height") {
+            return heightPixels;
+        } else {
+            return widthPixels;
+        }
+    }
+
+    private boolean isLandscape(){
+        return (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
     }
 
 }
