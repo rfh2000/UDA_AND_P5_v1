@@ -22,12 +22,6 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
-//    private static final int[] ATTRS = new int[]{
-////            R.drawable.test_divider
-////            R.attr.dividerHorizontal
-//        R.drawable.test_divider
-//    };
-
 
     public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
 
@@ -85,8 +79,8 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
             left = parent.getWidth()/5*2;
             right = parent.getWidth() - parent.getPaddingRight();
         }
-        Log.v("DID", "Left is " + left);
-        Log.v("DID", "Right is " + right);
+//        Log.v("DID", "Left is " + left);
+//        Log.v("DID", "Right is " + right);
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View child = parent.getChildAt(i);

@@ -7,17 +7,17 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 68,
-                    "endOffset": 119
+                    "endColumn": 37,
+                    "endOffset": 88
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 68,
-                        "endOffset": 119
+                        "startOffset": 281,
+                        "endColumn": 37,
+                        "endOffset": 314
                     }
                 }
             },
@@ -25,515 +25,337 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 124,
-                    "endColumn": 69,
-                    "endOffset": 189
+                    "startOffset": 93,
+                    "endColumn": 68,
+                    "endOffset": 157
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 124,
-                        "endColumn": 69,
-                        "endOffset": 189
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 194,
-                    "endColumn": 73,
-                    "endOffset": 263
+                    "startOffset": 162,
+                    "endColumn": 69,
+                    "endOffset": 227
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 194,
-                        "endColumn": 73,
-                        "endOffset": 263
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 268,
-                    "endColumn": 75,
-                    "endOffset": 339
+                    "startOffset": 232,
+                    "endColumn": 73,
+                    "endOffset": 301
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 268,
-                        "endColumn": 75,
-                        "endOffset": 339
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 344,
-                    "endColumn": 58,
-                    "endOffset": 398
+                    "startOffset": 306,
+                    "endColumn": 75,
+                    "endOffset": 377
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 344,
-                        "endColumn": 58,
-                        "endOffset": 398
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 403,
-                    "endColumn": 70,
-                    "endOffset": 469
+                    "startOffset": 382,
+                    "endColumn": 58,
+                    "endOffset": 436
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 403,
-                        "endColumn": 70,
-                        "endOffset": 469
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 474,
-                    "endColumn": 67,
-                    "endOffset": 537
+                    "startOffset": 441,
+                    "endColumn": 70,
+                    "endOffset": 507
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 474,
-                        "endColumn": 67,
-                        "endOffset": 537
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 542,
-                    "endColumn": 59,
-                    "endOffset": 597
+                    "startOffset": 512,
+                    "endColumn": 67,
+                    "endOffset": 575
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 59,
-                        "endOffset": 110
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 602,
-                    "endColumn": 69,
-                    "endOffset": 667
+                    "startOffset": 580,
+                    "endColumn": 59,
+                    "endOffset": 635
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 115,
-                        "endColumn": 69,
-                        "endOffset": 180
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 672,
-                    "endColumn": 70,
-                    "endOffset": 738
+                    "startOffset": 640,
+                    "endColumn": 69,
+                    "endOffset": 705
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 185,
-                        "endColumn": 70,
-                        "endOffset": 251
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 743,
-                    "endColumn": 71,
-                    "endOffset": 810
+                    "startOffset": 710,
+                    "endColumn": 70,
+                    "endOffset": 776
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 256,
-                        "endColumn": 71,
-                        "endOffset": 323
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 815,
-                    "endColumn": 57,
-                    "endOffset": 868
+                    "startOffset": 781,
+                    "endColumn": 71,
+                    "endOffset": 848
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 328,
-                        "endColumn": 57,
-                        "endOffset": 381
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 873,
+                    "startOffset": 853,
                     "endColumn": 57,
-                    "endOffset": 926
+                    "endOffset": 906
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 386,
-                        "endColumn": 57,
-                        "endOffset": 439
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 931,
-                    "endColumn": 105,
-                    "endOffset": 1032
+                    "startOffset": 911,
+                    "endColumn": 57,
+                    "endOffset": 964
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 444,
-                        "endColumn": 105,
-                        "endOffset": 545
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1037,
-                    "endColumn": 63,
-                    "endOffset": 1096
+                    "startOffset": 969,
+                    "endColumn": 105,
+                    "endOffset": 1070
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 550,
-                        "endColumn": 63,
-                        "endOffset": 609
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1101,
-                    "endColumn": 56,
-                    "endOffset": 1153
+                    "startOffset": 1075,
+                    "endColumn": 63,
+                    "endOffset": 1134
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 325,
-                        "endColumn": 56,
-                        "endOffset": 377
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1158,
-                    "endColumn": 52,
-                    "endOffset": 1206
+                    "startOffset": 1139,
+                    "endColumn": 56,
+                    "endOffset": 1191
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 90,
-                        "endColumn": 52,
-                        "endOffset": 138
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1211,
-                    "endColumn": 54,
-                    "endOffset": 1261
+                    "startOffset": 1196,
+                    "endColumn": 52,
+                    "endOffset": 1244
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 88,
-                        "endColumn": 54,
-                        "endOffset": 138
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1266,
-                    "endColumn": 56,
-                    "endOffset": 1318
+                    "startOffset": 1249,
+                    "endColumn": 54,
+                    "endOffset": 1299
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 143,
-                        "endColumn": 56,
-                        "endOffset": 195
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1323,
-                    "endColumn": 65,
-                    "endOffset": 1384
+                    "startOffset": 1304,
+                    "endColumn": 56,
+                    "endOffset": 1356
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 259,
-                        "endColumn": 65,
-                        "endOffset": 320
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1389,
-                    "endColumn": 58,
-                    "endOffset": 1443
+                    "startOffset": 1361,
+                    "endColumn": 65,
+                    "endOffset": 1422
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 200,
-                        "endColumn": 58,
-                        "endOffset": 254
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1448,
-                    "endColumn": 51,
-                    "endOffset": 1495
+                    "startOffset": 1427,
+                    "endColumn": 58,
+                    "endOffset": 1481
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 36,
-                        "endColumn": 51,
-                        "endOffset": 83
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1500,
-                    "endColumn": 53,
-                    "endOffset": 1549
+                    "startOffset": 1486,
+                    "endColumn": 51,
+                    "endOffset": 1533
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 36,
-                        "endColumn": 53,
-                        "endOffset": 85
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1554,
-                    "endColumn": 41,
-                    "endOffset": 1591
+                    "startOffset": 1538,
+                    "endColumn": 53,
+                    "endOffset": 1587
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 238,
-                        "endColumn": 41,
-                        "endOffset": 275
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1596,
-                    "endColumn": 94,
-                    "endOffset": 1686
+                    "startOffset": 1592,
+                    "endColumn": 41,
+                    "endOffset": 1629
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 143,
-                        "endColumn": 94,
-                        "endOffset": 233
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1691,
-                    "endColumn": 54,
-                    "endOffset": 1741
+                    "startOffset": 1634,
+                    "endColumn": 94,
+                    "endOffset": 1724
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 542,
-                        "endColumn": 54,
-                        "endOffset": 592
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\values-sw600dp\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1746,
-                    "endColumn": 62,
-                    "endOffset": 1804
+                    "startOffset": 1729,
+                    "endColumn": 54,
+                    "endOffset": 1779
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 614,
-                        "endColumn": 62,
-                        "endOffset": 672
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1809,
-                    "endLine": 32,
-                    "endColumn": 12,
-                    "endOffset": 1986
+                    "startOffset": 1784,
+                    "endColumn": 62,
+                    "endOffset": 1842
                 },
                 "from": {
-                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 677,
-                        "endLine": 14,
-                        "endColumn": 12,
-                        "endOffset": 854
-                    }
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1847,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 2024
+                },
+                "from": {
+                    "file": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
                 }
             }
         ]

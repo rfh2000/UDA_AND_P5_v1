@@ -45,21 +45,18 @@ public class ArticleListActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
     private Toolbar mToolbar;
-    private CardView mCardView;
-    private CollapsingToolbarLayout mCollapsingToolbarLayout;
+    //private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
+    private boolean mIsLandscape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-        findScreenSize();
-        //isLandscape();
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        //mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
 
 //         Added line below based on developer guide
 //        setSupportActionBar(mToolbar);
@@ -67,10 +64,6 @@ public class ArticleListActivity extends AppCompatActivity implements
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mToolbar.setLogo(R.drawable.logo);
-
-        // Set the max elevation for the CardView
-        //mCardView = (CardView) findViewById(R.id.cardview);
-        //mCardView.setMaxCardElevation(8f);
 
         //final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
@@ -91,6 +84,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     protected void onStart() {
         super.onStart();
+        mIsLandscape = isLandscape();
         registerReceiver(mRefreshingReceiver,
                 new IntentFilter(UpdaterService.BROADCAST_ACTION_STATE_CHANGE));
     }
@@ -124,38 +118,25 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        Adapter adapter = new Adapter(cursor);
+        Adapter adapter;
+        boolean isTablet;
         int columnCount;
+
+        adapter = new Adapter(cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-//        if (isTablet()) {
-//            columnCount = getResources().getInteger(R.integer.list_column_count);
-//        } else {
-//            columnCount = 1;
-//        }
-        //columnCount = 2;
-        columnCount = (isLandscape() ? 3 : 2);
+        columnCount = (mIsLandscape ? getResources().getInteger(R.integer.landscape_column_count) :
+                                getResources().getInteger(R.integer.portrait_column_count));
+        isTablet = getResources().getBoolean(R.bool.isTablet);
 
-        if (isTablet()) {
+        if (isTablet){
             StaggeredGridLayoutManager sglm = new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
             mRecyclerView.setLayoutManager(sglm);
         } else {
             LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(llm);
             mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-            //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL, R.drawable.test_divider));
         }
-        //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-        //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL, R.drawable.test_divider));
-
-//        StaggeredGridLayoutManager sglm =
-//                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
-//        mRecyclerView.setLayoutManager(sglm);
-
-        // Set the max elevation for the CardView
-        //mCardView = (CardView) findViewById(R.id.cardview);
-        //mCardView.setMaxCardElevation(8.0f);
     }
 
     @Override
@@ -178,10 +159,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-            // CHANGE THE CARDVIEW ITEM HERE
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
-
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -197,26 +175,21 @@ public class ArticleListActivity extends AppCompatActivity implements
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
-            //holder.bodyView.setText(mCursor.getString(ArticleLoader.Query.BODY));
             holder.bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
-//            holder.subtitleView.setText(
-//                    DateUtils.getRelativeTimeSpanString(
-//                            mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
-//                            System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-//                            DateUtils.FORMAT_ABBREV_ALL).toString()
-//                            + " by "
-//                            + mCursor.getString(ArticleLoader.Query.AUTHOR));
-
             holder.authorView.setText(mCursor.getString(ArticleLoader.Query.AUTHOR));
             holder.dateView.setText(DateUtils.getRelativeTimeSpanString(
                                         mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                                         System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-                                        DateUtils.FORMAT_ABBREV_ALL).toString());
-
+                    DateUtils.FORMAT_ABBREV_ALL).toString());
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
-            //holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+
+            boolean isTablet = getResources().getBoolean(R.bool.isTablet);
+            if (isTablet) {
+                holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+
+            }
         }
 
         @Override
@@ -227,44 +200,18 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public DynamicHeightNetworkImageView thumbnailView;
-        //public ImageView thumbnailView;
         public TextView titleView;
         public TextView bodyView;
-        public TextView subtitleView;
         public TextView authorView;
         public TextView dateView;
 
         public ViewHolder(View view) {
             super(view);
-
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
-            //thumbnailView = (ImageView) view.findViewById(R.id.thumbnail2);
             titleView = (TextView) view.findViewById(R.id.article_title);
             bodyView = (TextView) view.findViewById(R.id.article_body);
-            //subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
             authorView = (TextView) view.findViewById(R.id.article_author);
             dateView = (TextView) view.findViewById(R.id.article_date);
-        }
-    }
-
-    public void findScreenSize(){
-        DisplayMetrics metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        int widthPixels = metrics.widthPixels;
-        int heightPixels = metrics.heightPixels;
-        float scaleFactor = metrics.density;
-        float widthDp = widthPixels / scaleFactor;
-        float heightDp = heightPixels / scaleFactor;
-        float smallestWidth = Math.min(widthDp, heightDp);
-        Log.v("LOG______TAG", "Smallest width is " + smallestWidth);
-
-        if (smallestWidth >= 720) {
-            //Device is a 10" tablet
-            Log.v("LOG______TAG", "I'm a 10");
-        }
-        else if (smallestWidth >= 600) {
-            //Device is a 7" tablet
-            Log.v("LOG______TAG", "I'm a 7");
         }
     }
 
@@ -272,20 +219,4 @@ public class ArticleListActivity extends AppCompatActivity implements
         return (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
     }
 
-    private boolean isTablet(){
-        DisplayMetrics metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        int widthPixels = metrics.widthPixels;
-        int heightPixels = metrics.heightPixels;
-        float scaleFactor = metrics.density;
-        float widthDp = widthPixels / scaleFactor;
-        float heightDp = heightPixels / scaleFactor;
-        float smallestWidth = Math.min(widthDp, heightDp);
-        //Log.v("LOG______TAG", "Smallest width is " + smallestWidth);
-        if (smallestWidth >= 600) {
-            //Device is a 7" tablet
-            return true;
-        }
-        return false;
-    }
 }

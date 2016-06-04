@@ -56,6 +56,10 @@
         "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\layout\\activity_article_list.xml"
     },
     {
+        "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_article2.xml",
+        "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\layout\\list_item_article2.xml"
+    },
+    {
         "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_navigation_menu.xml"
     },

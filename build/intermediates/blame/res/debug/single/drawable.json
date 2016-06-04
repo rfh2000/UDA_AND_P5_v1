@@ -12,6 +12,10 @@
         "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\drawable\\photo_background_protection.xml"
     },
     {
+        "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\drawable\\test_divider.xml",
+        "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\drawable\\test_divider.xml"
+    },
+    {
         "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\drawable\\padded_divider.xml",
         "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\drawable\\padded_divider.xml"
+    },
+    {
+        "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\drawable\\my_rect.xml",
+        "source": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\src\\main\\res\\drawable\\my_rect.xml"
     },
     {
         "merged": "C:\\Users\\lecoq\\AndroidStudioProjects\\UDA_AND_P5_v1\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
