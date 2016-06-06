@@ -1,31 +1,30 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/meta_bar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:background="?attr/colorPrimary"
         android:layout_gravity="bottom"
-        android:orientation="vertical"
         android:layout_marginTop="16dp"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/fragment_article_title"
             style="?android:attr/textAppearanceLargeInverse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="@fraction/detail_headline_line_spacing_multiplier"
+            android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
             android:paddingLeft="@dimen/detail_inner_horiz_margin"
             android:paddingRight="@dimen/detail_inner_horiz_margin"
-            android:paddingTop="@dimen/detail_metabar_vert_padding"
-            android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-            android:lineSpacingMultiplier="@fraction/detail_headline_line_spacing_multiplier" />
+            android:paddingTop="@dimen/detail_metabar_vert_padding" />
 
         <TextView
             android:id="@+id/fragment_article_subtitle"
@@ -34,7 +33,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:paddingLeft="@dimen/detail_inner_horiz_margin"
-            android:paddingRight="@dimen/detail_inner_horiz_margin"/>
+            android:paddingRight="@dimen/detail_inner_horiz_margin" />
 
         <ImageView
             android:id="@+id/photo"
@@ -67,8 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
                 app:expandedTitleMarginStart="72dp"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             </android.support.design.widget.CollapsingToolbarLayout>
@@ -78,8 +77,7 @@
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            >
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <TextView
                 android:id="@+id/fragment_article_body"
@@ -88,12 +86,12 @@
                 android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
                 android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                 android:layout_marginTop="16dp"
-                android:paddingTop="@dimen/detail_metabar_vert_padding"
+                android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
+                android:paddingTop="@dimen/detail_metabar_vert_padding"
                 android:textColor="@color/colorTextSecondary"
                 android:textColorLink="@color/colorAccent"
-                android:textSize="@dimen/detail_text_size_medium_material"
-                android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+                android:textSize="@dimen/detail_text_size_medium_material" />
 
         </android.support.v4.widget.NestedScrollView>
 
@@ -104,10 +102,10 @@
             android:layout_margin="16dp"
             android:clickable="true"
             android:src="@drawable/ic_share"
+            app:elevation="@dimen/fab_elevation"
             app:layout_anchor="@id/fragment_article_body"
             app:layout_anchorGravity="bottom|right|end"
-            app:elevation="@dimen/fab_elevation"
-            app:pressedTranslationZ="@dimen/fab_press_translation_z"/>
+            app:pressedTranslationZ="@dimen/fab_press_translation_z" />
 
     </android.support.design.widget.CoordinatorLayout>
 
