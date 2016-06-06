@@ -10,20 +10,20 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:layout_weight="2"
         android:background="?attr/colorPrimary"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/fragment_article_title"
-            style="?android:attr/textAppearanceMediumInverse"
+            style="?android:attr/textAppearanceLargeInverse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingMultiplier="@fraction/detail_headline_line_spacing_multiplier"
             android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-            android:paddingLeft="@dimen/detail_inner_horiz_margin"
-            android:paddingRight="@dimen/detail_inner_horiz_margin"
+            android:paddingLeft="@dimen/detail_title_horiz_margin"
+            android:paddingRight="@dimen/detail_title_horiz_margin"
             android:paddingTop="@dimen/detail_metabar_vert_padding" />
 
         <TextView
@@ -32,15 +32,15 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingLeft="@dimen/detail_inner_horiz_margin"
-            android:paddingRight="@dimen/detail_inner_horiz_margin" />
+            android:paddingLeft="@dimen/detail_title_horiz_margin"
+            android:paddingRight="@dimen/detail_title_horiz_margin" />
 
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="6"
-            android:padding="4dp"
+            android:padding="@dimen/small_margin"
             android:scaleType="fitXY"
             android:src="@drawable/empty_detail" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
                 android:layout_marginRight="@dimen/detail_inner_horiz_margin"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/large_margin"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
                 android:paddingTop="@dimen/detail_metabar_vert_padding"
@@ -98,7 +98,7 @@
             android:id="@+id/share_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/large_margin"
             android:clickable="true"
             android:src="@drawable/ic_share"
             app:elevation="@dimen/fab_elevation"

@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingMultiplier="@fraction/detail_headline_line_spacing_multiplier"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
+            android:paddingLeft="@dimen/large_margin"
+            android:paddingRight="@dimen/large_margin"
             android:paddingTop="32dp" />
 
         <TextView
@@ -29,15 +29,15 @@
             style="?android:attr/textAppearanceSmallInverse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp" />
+            android:paddingLeft="@dimen/large_margin"
+            android:paddingRight="@dimen/large_margin" />
 
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"
-            android:padding="4dp"
+            android:padding="@dimen/small_margin"
             android:scaleType="fitXY"
             android:src="@drawable/empty_detail" />
 
@@ -81,8 +81,8 @@
                 style="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:layout_marginRight="@dimen/large_margin"
                 android:layout_marginTop="0dp"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
@@ -95,7 +95,7 @@
             android:id="@+id/share_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/large_margin"
             android:clickable="true"
             android:src="@drawable/ic_share"
             app:elevation="@dimen/fab_elevation"

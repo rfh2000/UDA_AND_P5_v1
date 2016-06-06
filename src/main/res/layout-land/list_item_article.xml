@@ -6,8 +6,8 @@
     android:clickable="true"
     android:focusable="true"
     android:orientation="horizontal"
-    android:paddingBottom="8dp"
-    android:paddingRight="8dp">
+    android:paddingBottom="@dimen/medium_margin"
+    android:paddingRight="@dimen/medium_margin">
 
     <com.example.xyzreader.ui.DynamicHeightNetworkImageView
         android:id="@+id/thumbnail"
@@ -17,7 +17,7 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="false"
         android:layout_alignParentStart="false"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="@dimen/medium_margin"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:baselineAlignBottom="false"
@@ -34,8 +34,8 @@
             android:id="@+id/list_article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="#000000"
@@ -47,7 +47,7 @@
             style="@style/TextAppearance.Small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginTop="0dp"
             android:ellipsize="end"
             android:maxLines="2"
@@ -73,7 +73,7 @@
                 style="@style/TextAppearance.Small"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="@dimen/medium_margin"
                 android:layout_weight="2"
                 android:gravity="right" />
 

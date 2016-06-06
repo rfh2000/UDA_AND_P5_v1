@@ -29,10 +29,10 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="8dp"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingLeft="@dimen/large_margin"
+            android:paddingRight="@dimen/large_margin"
+            android:paddingTop="@dimen/medium_margin"
             android:singleLine="true" />
 
         <View
@@ -47,10 +47,10 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="3"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="8dp"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingLeft="@dimen/large_margin"
+            android:paddingRight="@dimen/large_margin"
+            android:paddingTop="@dimen/medium_margin"
             android:singleLine="false"
             android:textColorLink="@color/colorAccent" />
 
@@ -62,10 +62,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="8dp">
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingLeft="@dimen/large_margin"
+            android:paddingRight="@dimen/large_margin"
+            android:paddingTop="@dimen/medium_margin">
 
             <ImageView
                 android:id="@+id/image_news"
@@ -82,7 +82,7 @@
                 android:layout_toRightOf="@id/image_news"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingLeft="8dp"
+                android:paddingLeft="@dimen/medium_margin"
                 android:singleLine="true"
                 android:textColor="#000000" />
 
@@ -95,7 +95,7 @@
                 android:layout_toRightOf="@id/list_article_author"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingLeft="8dp"
+                android:paddingLeft="@dimen/medium_margin"
                 android:singleLine="true" />
 
         </RelativeLayout>
