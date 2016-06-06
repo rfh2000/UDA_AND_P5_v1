@@ -8,40 +8,32 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-    card_view:cardElevation="2dp"
-    card_view:cardCornerRadius="4dp">
-
-    <!--android:layout_marginLeft="4dp"-->
-    <!--android:layout_marginRight="4dp"-->
-    <!--android:layout_marginTop="4dp"-->
-    <!--android:layout_marginBottom="4dp"-->
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--android:layout_height="wrap_content"-->
-
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/photo_placeholder"
-            />
+            android:background="@color/photo_placeholder" />
 
         <TextView
             android:id="@+id/list_article_title"
             style="@style/TextAppearance.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="8dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="8dp"
             android:ellipsize="end"
-            android:singleLine="true"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:singleLine="true" />
 
         <View
             android:layout_width="match_parent"
@@ -53,20 +45,14 @@
             style="@style/TextAppearance.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorLink="@color/colorAccent"
-            android:paddingLeft="16dp"
-            android:paddingTop="8dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="8dp"
+            android:ellipsize="end"
             android:maxLines="3"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
             android:singleLine="false"
-            android:ellipsize="end" />
-
-        <!--android:paddingLeft="8dp"-->
-        <!--android:paddingTop="16dp"-->
-        <!--android:paddingRight="16dp"-->
-        <!--android:paddingBottom="16dp"-->
-
+            android:textColorLink="@color/colorAccent" />
 
         <View
             android:layout_width="match_parent"
@@ -76,46 +62,41 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingTop="8dp"
             android:paddingRight="16dp"
-            android:paddingBottom="8dp">
+            android:paddingTop="8dp">
 
             <ImageView
                 android:id="@+id/image_news"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_news_48"/>
+                android:src="@drawable/ic_news_48" />
 
             <TextView
                 android:id="@+id/list_article_author"
                 style="@style/TextAppearance.Small"
-                android:layout_toRightOf="@id/image_news"
-                android:layout_alignTop="@id/image_news"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:textColor="#000000"
+                android:layout_alignTop="@id/image_news"
+                android:layout_toRightOf="@id/image_news"
+                android:ellipsize="end"
                 android:maxLines="1"
+                android:paddingLeft="8dp"
                 android:singleLine="true"
-                android:ellipsize="end" />
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/list_article_date"
                 style="@style/TextAppearance.Small"
-                android:layout_toRightOf="@id/list_article_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:paddingLeft="8dp"
+                android:layout_toRightOf="@id/list_article_author"
+                android:ellipsize="end"
                 android:maxLines="1"
-                android:singleLine="true"
-                android:ellipsize="end" />
-
-            <!--android:paddingLeft="16dp"-->
-            <!--android:paddingTop="16dp"-->
-            <!--android:paddingRight="16dp"-->
-            <!--android:paddingBottom="16dp"-->
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
 
         </RelativeLayout>
 
