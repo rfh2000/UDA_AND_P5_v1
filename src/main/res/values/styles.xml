@@ -41,10 +41,11 @@
     <style name="TextAppearance.Large">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorLink">@color/colorAccent</item>
     </style>
 
     <style name="TextAppearance.LargeInverse">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FFF</item>
     </style>
@@ -55,7 +56,7 @@
     </style>
 
     <style name="TextAppearance.MediumInverse">
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FFF</item>
     </style>
@@ -67,7 +68,6 @@
 
     <style name="TextAppearance.SmallInverse">
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FFF</item>
     </style>
 
