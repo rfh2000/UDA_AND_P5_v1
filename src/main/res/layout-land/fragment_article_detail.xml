@@ -78,6 +78,7 @@
 
             <TextView
                 android:id="@+id/fragment_article_body"
+                style="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -86,9 +87,7 @@
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
                 android:paddingTop="@dimen/detail_metabar_vert_padding"
-                android:textColor="@color/colorTextSecondary"
-                android:textColorLink="@color/colorAccent"
-                android:textSize="@dimen/detail_text_size_medium_material" />
+                android:textColor="@color/colorTextSecondary" />
 
         </android.support.v4.widget.NestedScrollView>
 
