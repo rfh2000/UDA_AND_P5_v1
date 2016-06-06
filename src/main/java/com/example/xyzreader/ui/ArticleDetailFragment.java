@@ -7,21 +7,12 @@ import android.content.Loader;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
-import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,12 +23,8 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
-
-import java.io.File;
-import java.net.URI;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
@@ -133,22 +120,32 @@ public class ArticleDetailFragment extends Fragment implements
 
         mStatusBarColorDrawable = new ColorDrawable(0);
 
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
-                        .setType("text/plain")
-                        .setText("Some sample text")
-                        .getIntent(), getString(R.string.action_share)));
-            }
-        });
-
         bindViews();
 //        updateStatusBar();
 
         findScreenSize();
 
         return mRootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        final TextView tvTitle = (TextView) view.findViewById(R.id.fragment_article_title);
+        final TextView tvBody = (TextView) view.findViewById(R.id.fragment_article_body);
+//        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                TextView tvTitle = (TextView) view.findViewById(R.id.fragment_article_title);
+//                TextView tvBody = (TextView) view.findViewById(R.id.fragment_article_body);
+                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
+                        .setType("text/plain")
+                        .setSubject(tvTitle.getText().toString())
+                        .setText(tvBody.getText().toString())
+                        .getIntent(), getString(R.string.action_share)));
+            }
+        });
     }
 
     private void updateStatusBar() {
@@ -185,11 +182,11 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
-        TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
-        TextView subTitleView = (TextView) mRootView.findViewById(R.id.article_subtitle);
+        TextView titleView = (TextView) mRootView.findViewById(R.id.fragment_article_title);
+        TextView subTitleView = (TextView) mRootView.findViewById(R.id.fragment_article_subtitle);
 //        TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
 //        bylineView.setMovementMethod(new LinkMovementMethod());
-        TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+        TextView bodyView = (TextView) mRootView.findViewById(R.id.fragment_article_body);
         //bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
@@ -248,7 +245,8 @@ public class ArticleDetailFragment extends Fragment implements
                     });
         } else {
             mRootView.setVisibility(View.GONE);
-            //titleView.setText("N/A");
+            titleView.setText("N/A");
+            subTitleView.setText("N/A");
             //bylineView.setText("N/A" );
             bodyView.setText("N/A");
         }

@@ -8,26 +8,17 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.content.res.Configuration;
 import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.xyzreader.R;
@@ -208,10 +199,10 @@ public class ArticleListActivity extends AppCompatActivity implements
         public ViewHolder(View view) {
             super(view);
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
-            titleView = (TextView) view.findViewById(R.id.article_title);
-            bodyView = (TextView) view.findViewById(R.id.article_body);
-            authorView = (TextView) view.findViewById(R.id.article_author);
-            dateView = (TextView) view.findViewById(R.id.article_date);
+            titleView = (TextView) view.findViewById(R.id.list_article_title);
+            bodyView = (TextView) view.findViewById(R.id.list_article_body);
+            authorView = (TextView) view.findViewById(R.id.list_article_author);
+            dateView = (TextView) view.findViewById(R.id.list_article_date);
         }
     }
 

@@ -31,7 +31,7 @@
             />
 
         <TextView
-            android:id="@+id/article_title"
+            android:id="@+id/list_article_title"
             style="@style/TextAppearance.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:background="@color/colorDivider" />
 
         <TextView
-            android:id="@+id/article_body"
+            android:id="@+id/list_article_body"
             style="@style/TextAppearance.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 android:src="@drawable/ic_news_48"/>
 
             <TextView
-                android:id="@+id/article_author"
+                android:id="@+id/list_article_author"
                 style="@style/TextAppearance.Small"
                 android:layout_toRightOf="@id/image_news"
                 android:layout_alignTop="@id/image_news"
@@ -101,9 +101,9 @@
                 android:ellipsize="end" />
 
             <TextView
-                android:id="@+id/article_date"
+                android:id="@+id/list_article_date"
                 style="@style/TextAppearance.Small"
-                android:layout_toRightOf="@id/article_author"
+                android:layout_toRightOf="@id/list_article_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
