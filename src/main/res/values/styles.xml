@@ -1,7 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -26,19 +25,11 @@
 
         <item name="android:windowNoTitle">true</item>
 
-        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
-
     </style>
-
-    <!--<style name="ToolBarWithNavigationBack">-->
-        <!--<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>-->
-    <!--</style>-->
 
     <style name="ToolBarWithNavigationBack">
         <item name="navigationIcon">@drawable/ic_arrow_back</item>
     </style>
-
 
     <style name="TextAppearance" parent="@android:style/TextAppearance">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -46,12 +37,6 @@
         <item name="android:textColorHint">?android:attr/textColorHint</item>
         <item name="android:textStyle">normal</item>
     </style>
-
-    <!-- <style name="TextAppearance.Large">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-    </style> -->
 
     <style name="TextAppearance.Large">
         <item name="android:textSize">18sp</item>
@@ -63,12 +48,6 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FFF</item>
     </style>
-
-    <!--<style name="TextAppearance.Medium">-->
-        <!--<item name="android:textSize">22sp</item>-->
-        <!--<item name="android:textStyle">italic</item>-->
-        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
-    <!--</style>-->
 
     <style name="TextAppearance.Medium">
         <item name="android:textSize">14sp</item>
@@ -85,8 +64,6 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-
-    <!--<item name="android:textStyle">bold</item>-->
 
     <style name="TextAppearance.SmallInverse">
         <item name="android:textSize">14sp</item>
