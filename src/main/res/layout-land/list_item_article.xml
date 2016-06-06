@@ -2,37 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:focusable="true"
-    android:clickable="true"
-    android:paddingRight="8dp"
-    android:paddingBottom="8dp"
     android:background="@color/colorLightPrimary"
-    android:orientation="horizontal">
-
-    <!--android:paddingRight="8dp"-->
-    <!--android:paddingBottom="8dp"-->
-    <!--android:paddingLeft="8dp"-->
-    <!--android:paddingTop="10dp"-->
-    <!--android:paddingBottom="10dp"-->
-    <!--android:background="?android:attr/selectableItemBackground"-->
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingRight="8dp">
 
     <com.example.xyzreader.ui.DynamicHeightNetworkImageView
         android:id="@+id/thumbnail"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:scaleType="fitXY"
-        android:layout_marginRight="8dp"
-        android:layout_alignParentStart="false"
         android:layout_alignParentEnd="false"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
         android:adjustViewBounds="true"
         android:baselineAlignBottom="false"
-        android:src="@drawable/empty_detail"/>
-
-    <!-- android:background="@color/photo_placeholder" -->
-    <!-- height could be wrap_content -->
+        android:scaleType="fitXY"
+        android:src="@drawable/empty_detail" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -41,52 +31,48 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/list_article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/list_article_title"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
-            />
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/list_article_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/list_article_body"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:layout_marginTop="0dp"
             android:layout_marginBottom="4dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginTop="0dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="bottom">
+            android:gravity="bottom"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/list_article_author"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:maxLines="1"
                 android:ellipsize="end"
-                android:id="@+id/list_article_author"
-                />
+                android:maxLines="1" />
 
             <TextView
+                android:id="@+id/list_article_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:id="@+id/list_article_date"
-                android:gravity="right"
                 android:layout_marginRight="8dp"
-                />
+                android:layout_weight="2"
+                android:gravity="right" />
 
         </LinearLayout>
 
